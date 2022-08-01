@@ -1,4 +1,4 @@
-# Anotações JavaScript
+
 Anotações de estudo sobre JavaScript, assuntos que tenho dificuldade, ou novos aprendizados.
 
 # Tópicos
@@ -6,6 +6,7 @@ Anotações de estudo sobre JavaScript, assuntos que tenho dificuldade, ou novos
 - [IF-ELSE, ELSE IF](#IF-ELSE)
 - [Estrutura de repetição: WHILE, DO WHILE](#WHILE)
 - [Estrutura de repetição FOR, FOR...IN, FOR...OF](#FOR)
+- [setInterval e clearInterval, setTimeout e cleearTimeout](#setInterval)
 
 ## <a name="Destructuring"></a> Destructuring
 > É uma expressão que permite extrair dados de um array ou objeto de em variáveis distintas. 
@@ -171,6 +172,59 @@ let i = 0
       console.log(letras)                           => l u a n a 
     }
   }
+```
+  
+  
+  <hr>
+  
+  
+ ## <a name="setInterval"></a> setInterval( ) e clearInterval( ), setTimeout( ) e clearTimeout( ).
+ 
+ 
+>**setInterval( ):** Método chama uma função em intervalos específicos em milissegundos. Função continua até clearInterval( ) ser chamado.
+ ```javascript
+ //suponha que há uma div criada no HTML com o ID: quadrado, medidas de 100px por 100px. E que tenha dois botões com IDs: btn1, btn2.
+ 
+let temp
+function mudarCor(){                                        // muda a cor do quadrado.
+    const div = document.getElementById('quadrado')
+    let r = Math.floor(Math.random() * 255)                   
+    let g = Math.floor(Math.random() * 255)               // gerando cor aleatoria rgb. 
+    let b = Math.floor(Math.random() * 255)                                         
+    div.style.backgroundColor = "rgb("+r+","+g+","+b+")";
+}
+
+function iniciar(){
+    temp = setInterval(mudarCor,2000)        // função iniciar vai chamar a função mudarCor a cada 2 segundos.
+}
+
+function parar(){
+    clearInterval(temp)                     // para de chamar temp que está responsavel por iniciar a função mudarCor.
+}
+
+function addEventos(){                     // responsavel por adicionar evento aos botões.
+    document.getElementById('btn1').addEventListener('click', iniciar)
+    document.getElementById('btn2').addEventListener('click', parar)
+}
+
+window.addEventListener('load', addEventos)  // quando a página carregar a função de eventos já estará disponivel.
+ ```
+> **setTimeout( ):** Executa algo específico assim que o tempo que foi passado expirar.
+```javascript
+function saudar(){
+    console.log('olá gustavo')      
+}
+
+const ativar = setTimeout(saudar, 3000)   // executa a função saudar em 3 segundos.
+
+function parar(){
+    clearTimeout(ativar)                 // para a constante ativar, que está responsavel por chamar a função saudar.
+}
+
+document.getElementById('btn').addEventListener('click', parar)
+```
+
+<hr>
  
 
 
