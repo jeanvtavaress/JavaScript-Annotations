@@ -7,6 +7,7 @@ Anotações de estudo sobre JavaScript, assuntos que tenho dificuldade, ou novos
 - [Estrutura de repetição: WHILE, DO WHILE](#WHILE)
 - [Estrutura de repetição FOR, FOR...IN, FOR...OF](#FOR)
 - [setInterval e clearInterval, setTimeout e cleearTimeout](#setInterval)
+- [This](#This)
 
 ## <a name="Destructuring"></a> Destructuring
 > É uma expressão que permite extrair dados de um array ou objeto de em variáveis distintas. 
@@ -173,10 +174,8 @@ let i = 0
     }
   }
 ```
-  
-  
+
   <hr>
-  
   
  ## <a name="setInterval"></a> setInterval( ) e clearInterval( ), setTimeout( ) e clearTimeout( ).
  
@@ -225,6 +224,37 @@ document.getElementById('btn').addEventListener('click', parar)
 ```
 
 <hr>
+
+ ## <a name="This"></a> This
+ > **This:** Em uma função padrão, **this** pode variar seu resultado.
+ 
+ > Referência ao **this** sempre se refere a (e contém o valor de) um objeto.
+ 
+ > As arrow functions não vinculam seus próprios this, em vez disso, eles herdam o escopo do pai, que é chamado de escopo léxico.
+ ```javascript
+ const diaAdia = {
+  saudacao: 'Bom dia',
+    falar(){
+      console.log(this.saudacao)    // this está no contexto diaAdia
+    }
+ }
+ ```
+ > **This** funciona dentro de contexto. Para dar contexto ao **this**, usa-se .bind( )
+ ```javascript
+  const diaAdia = {
+    saudacao: 'Bom Dia',
+        falar(){
+            console.log(this.saudacao)
+        }
+}
+
+const falar = diaAdia.falar.bind(diaAdia)
+falar();
+ ```
+ 
+ <hr>
+ 
+ 
  
 
 
