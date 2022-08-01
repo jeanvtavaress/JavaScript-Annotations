@@ -2,7 +2,8 @@
 Anotações de estudo sobre JavaScript, assuntos que tenho dificuldade, ou novos aprendizados.
 
 # Tópicos
-- [Destructuring](#Destructuring)
+- [Destructuring](#Destructuring)[
+- [IF-ELSE, ELSE IF](#IF-ELSE)
 
 #### <a name="Destructuring"></a> Destructuring
 > É uma expressão que permite extrair dados de um array ou objeto de em variáveis distintas. 
@@ -81,6 +82,36 @@ const {instagram} = pessoa.links     => https://www.instagram.com/
     console.log('Nome :' +n+ ', Pai: ' +p)                => Nome: Gustavo, Pai: Pedro
   }                                                       => Nome: Felipe, Pai: Pedro
  ```
+ <hr>
+ 
+ #### <a name="IF-ELSE"></a> IF-ELSE, ELSE IF
+ > IF: Para especificar um bloco de código a ser executado se uma condição específica for verdadeira.
+ ```javascript
+ let idade = 18
+    if(idade >= 18){
+      return true             => true
+    }
+ ```
+ > ELSE: Bloco de código a ser executado, se a primeira for condição for falsa.
+ ```javascript
+ let idade = 17
+    if(idade >= 18){
+      return true             => 
+    } else {
+      return false            => false
+    }
+ ```
+ > ELSE IF: Especifica uma nova condição a ser testada se a primeira confição for falsa.
+ ```javascript
+ let idade = 17
+ let acompanhado = true
+    if(idade >= 18){
+      return true                                       => 
+    } else if(idade =< 18 && acompanhado == true){
+      return true                                       => true
+    }
+ ```
+ <hr>
  
  
  
