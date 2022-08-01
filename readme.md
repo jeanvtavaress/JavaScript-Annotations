@@ -5,8 +5,9 @@ Anotações de estudo sobre JavaScript, assuntos que tenho dificuldade, ou novos
 - [Destructuring](#Destructuring)
 - [IF-ELSE, ELSE IF](#IF-ELSE)
 - [Estrutura de repetição: WHILE, DO WHILE](#WHILE)
+- [Estrutura de repetição FOR, FOR...IN, FOR...OF](#FOR)
 
-#### <a name="Destructuring"></a> Destructuring
+## <a name="Destructuring"></a> Destructuring
 > É uma expressão que permite extrair dados de um array ou objeto de em variáveis distintas. 
 
 **Exemplo 01:** Destruturação de elementos de um objeto.
@@ -85,7 +86,7 @@ const {instagram} = pessoa.links     => https://www.instagram.com/
  ```
  <hr>
  
- #### <a name="IF-ELSE"></a> IF, ELSE, ELSE IF
+ ## <a name="IF-ELSE"></a> IF, ELSE, ELSE IF
  > IF: Para especificar um bloco de código a ser executado se uma condição específica for verdadeira.
  ```javascript
  let idade = 18
@@ -114,8 +115,8 @@ const {instagram} = pessoa.links     => https://www.instagram.com/
  ```
  <hr>
  
- #### <a name="WHILE"></a> Estrutura de repetição: WHILE, DO WHILE.
-> WHILE: Pecorre um bloco de código enquanto uma condição específica for verdadeira. While primeiro verifica a condição, e depois executa o código
+ ## <a name="WHILE"></a> Estrutura de repetição: WHILE, DO WHILE.
+> WHILE: Pecorre um bloco de código enquanto uma condição específica for verdadeira. While primeiro verifica a condição, e depois executa o código.
 ```javascript
 let contador = 0
   while(contador < 10){
@@ -131,6 +132,47 @@ let i = 0
   } while(i < 10)
 ```
 <hr>
+
+ ## <a name="FOR"></a> Estrutura de repetição: FOR, FOR...IN, FOR...OF.
+ > FOR: Pecorre um bloco de código varias vezes.
+ 
+ > Sintaxe: for(inicialização; condição; expressão final) - todas as três expressões na condição do loop são opcionais. No bloco de inicialização, não é necessário inicializar variável por exemplo.
+ ```javascript
+ let i = 0
+  for(; i < 9; i++){
+    console.log(i)                => 0 1 2 3 4 5 6 7 8
+  }
+ ```
+ > FOR...IN: Pecorre as propriedades de um objeto.
+ 
+ > Sintaxe: for(key in object)
+ ```javascript
+ const monstros = {
+  canada: 'sasquatch',
+  nepal: 'yeti',
+  scotland: 'loch ness monster'
+ }
+  for(let nomeMonstros in monstrons){               => sasquatch
+    console.log(monstros[nomeMonstros])             => yeti
+  }                                                 => loch ness monster
+ ```
+ > FOR...OF: Permite fazer um loop sobre estruturas de dados interaveis como arrays, strings, maps, nodelist e etc.
+ 
+ > Sintaxe: for(variavel of iteravel)
+  ```javascript
+//em Array
+  const carros = ['bmw', 'volvo', 'mini']
+    for(let nomeCarros of carros){                  => bwm
+      console.log(nomeCarros)                       => volvo
+    }                                               => mini
+// em String
+  const stg = 'luana'
+    for(letras of stg){
+      console.log(letras)                           => l u a n a 
+    }
+  }
+ 
+
 
  
  
