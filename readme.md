@@ -2,8 +2,9 @@
 Anotações de estudo sobre JavaScript, assuntos que tenho dificuldade, ou novos aprendizados.
 
 # Tópicos
-- [Destructuring](#Destructuring)[
+- [Destructuring](#Destructuring)
 - [IF-ELSE, ELSE IF](#IF-ELSE)
+- [Estrutura de repetição: WHILE, DO WHILE](#WHILE)
 
 #### <a name="Destructuring"></a> Destructuring
 > É uma expressão que permite extrair dados de um array ou objeto de em variáveis distintas. 
@@ -84,7 +85,7 @@ const {instagram} = pessoa.links     => https://www.instagram.com/
  ```
  <hr>
  
- #### <a name="IF-ELSE"></a> IF-ELSE, ELSE IF
+ #### <a name="IF-ELSE"></a> IF, ELSE, ELSE IF
  > IF: Para especificar um bloco de código a ser executado se uma condição específica for verdadeira.
  ```javascript
  let idade = 18
@@ -112,6 +113,25 @@ const {instagram} = pessoa.links     => https://www.instagram.com/
     }
  ```
  <hr>
+ 
+ #### <a name="WHILE"></a> Estrutura de repetição: WHILE, DO WHILE.
+> WHILE: Pecorre um bloco de código enquanto uma condição específica for verdadeira. While primeiro verifica a condição, e depois executa o código
+```javascript
+let contador = 0
+  while(contador < 10){
+    contador++                    => 9
+  }
+```
+> DO WHILE: Bloco de código é executado uma vez e repetido enquanto a condição for verdadeira.
+```javascript
+let i = 0
+  do{
+  console.log('Olá')
+  i++
+  } while(i < 10)
+```
+<hr>
+
  
  
  
