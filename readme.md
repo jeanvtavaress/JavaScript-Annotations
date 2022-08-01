@@ -8,6 +8,7 @@ Anotações de estudo sobre JavaScript, assuntos que tenho dificuldade, ou novos
 - [Estrutura de repetição FOR, FOR...IN, FOR...OF](#FOR)
 - [setInterval e clearInterval, setTimeout e cleearTimeout](#setInterval)
 - [This](#This)
+- [Callback](#Callback)
 
 ## <a name="Destructuring"></a> Destructuring
 > É uma expressão que permite extrair dados de um array ou objeto de em variáveis distintas. 
@@ -253,6 +254,31 @@ falar();
  ```
  
  <hr>
+ 
+ ## <a name="Callback"></a> Callback
+ > O que caracteriza um uma callback, é passar uma função como argumento para outra função, e executa-la durante o código.
+ ```javascript
+ function saudacao(nome){
+    console.log('Olá', nome);
+}
+
+function entradaDoUsuario(callback){
+    let nome = prompt('Nome por favor')
+    callback(nome)
+}
+
+entradaDoUsuario(saudacao)  
+ ```
+  ```javascript
+function exibePrimeiraMensagem (mensagem, callback) {
+	console.log(mensagem);
+	callback();
+}
+function exibeSegundaMensagem(){
+	console.log('Essa é a segunda mensagem do novo exemplo');
+} 
+exibePrimeiraMensagem ('Essa é a primeira mensagem do novo exemplo', exibeSegundaMensagem);  
+ ```
  
  
  
