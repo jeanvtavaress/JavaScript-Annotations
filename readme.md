@@ -9,7 +9,8 @@ Anotações de estudo sobre JavaScript, assuntos que tenho dificuldade, ou novos
 - [setInterval e clearInterval, setTimeout e cleearTimeout](#setInterval)
 - [This](#This)
 - [Callback](#Callback)
-- [Funções Construtoras](#FuncoesConstrutoras)
+- [Função Construtora](#FuncoesConstrutoras)
+- [Class](#Class)
 
 ## <a name="Destructuring"></a> Destructuring
 > É uma expressão que permite extrair dados de um array ou objeto de em variáveis distintas. 
@@ -315,6 +316,30 @@ console.log(palio)
  
  <hr>
  
+ ## <a name="Class"></a> Class
+ > Class são modelos para objetos JavaScript
+ 
+ > Class não sofre hoisting.
+ ```javascript
+ class Livro {
+	constructor(nome, editora, paginas){
+		this.nome = nome
+		this.editora = editora
+		this.paginas = paginas
+	}
+	anunciarTitulo(){
+		console.log(`Título: ${this.nome}`)
+	}
+	descreverTituilo(){
+		console.log(`${this.nome} é um livro da editora ${this.editora}, e contém ${this.paginas} páginas`)
+	}
+}
+
+const mindhunter = new Livro('MindHunter', 'Intrínseca', 374)
+mindhunter.anunciarTitulo()					// => Título: MindHunter
+mindhunter.descreverTituilo()					// => MindHunter é um livro da editora Intrínseca, e contém 374 páginas
+ ```
+
  
  
  
