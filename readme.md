@@ -231,6 +231,14 @@ document.getElementById('btn').addEventListener('click', parar)
  
  > Referência ao **this** sempre se refere a (e contém o valor de) um objeto.
  
+ > Em um método de objeto, this refere-se ao objeto.
+ 
+ > Em uma função, this refere-se ao objeto global.
+ 
+ > Em uma função no strict mode, this é undefined.
+ 
+ > Em um evento, this refere-se ao elemento que recebeu o evento.
+ 
  > As arrow functions não vinculam seus próprios this, em vez disso, eles herdam o escopo do pai, que é chamado de escopo léxico.
  ```javascript
  const diaAdia = {
