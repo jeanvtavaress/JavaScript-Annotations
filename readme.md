@@ -348,7 +348,10 @@ mindhunter.descreverTituilo()					// => MindHunter é um livro da editora Intrí
 - [Object.create()](#create)
 - [Object.entries()](#entries)
 - [Object.freeze()](#freeze)
-- [Object.keys()](#keys)
+- [Object.keys()](#keys)]
+- [Object.values()](#values)
+- [Object.seal()](#seal)
+- [Object.hasOwn()](#wasOwn)
  
  
  ## <a name="assign"></a> Object.assign()
@@ -446,7 +449,70 @@ console.log(Object.keys(familia))
 const ingredientes = ['Ovo', 'Trigo', 'Manteiga', 'Leite']
 console.log(Object.keys(ingredientes))
 // [ '0', '1', '2', '3' ]
+
+
 ```
+## <a name="values"></a> Object.values()
+> Retorna um array com os valores das propriedades de um objeto.
+```javascript
+const familia = {
+	pai: 'Augusto',
+	mae: 'Sandra',
+	irmao: 'Ricardo',
+	avó: 'Ana',
+	avô: 'Inacio'
+}
+
+console.log(Object.values(familia))
+// [ 'Augusto', 'Sandra', 'Ricardo', 'Ana', 'Inacio' ]
+```
+
+
+## <a name="seal"></a> Object.seal()
+> Sela um objeto, evitando que novas propriedades sejam adicionadas a ele, valores das propriedades atuais ainda podem ser alterados desde que sejam writable.
+```javascript
+const familia = {
+	pai: 'Augusto',
+	mae: 'Sandra',
+	irmao: 'Ricardo',
+	avó: 'Ana',
+	avô: 'Inacio'
+}
+
+Object.seal(familia)   // a partir de agora propriedades podem ser alteradas, mas não adicionadas ou excluidas.
+
+familia.tio = 'Gerson'		// não adicionado.
+familia.pai = 'Elias'		// propriedade alterada.
+
+console.log(familia);
+
+/*
+{
+  pai: 'Elias',
+  mae: 'Sandra',
+  irmao: 'Ricardo',
+  'avó': 'Ana',
+  'avô': 'Inacio'
+}
+*/
+````
+
+## <a name="hasOwn"></a> Object.hasOwn()
+> Retorna um valor booleano, se o objeto especifico possui a propriedade indicada retorna true, se a propriedade for herdada ou não existir, retorna false.
+```javascript 
+const familia = {
+	pai: 'pedro',
+	mae: 'luana',
+	avó: 'ana'
+}
+
+console.log(Object.hasOwn(familia, 'pai'))  //  true
+console.log(Object.hasOwn(familia, 'avô'))  //  false
+```
+
+<hr>
+
+
 
 
  
