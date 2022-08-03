@@ -157,7 +157,7 @@ let i = 0
   nepal: 'yeti',
   scotland: 'loch ness monster'
  }
-  for(let nomeMonstros in monstrons){              // => sasquatch
+  for(let nomeMonstros in monstros){              // => sasquatch
     console.log(monstros[nomeMonstros])            // => yeti
   }                                                // => loch ness monster
  ```
