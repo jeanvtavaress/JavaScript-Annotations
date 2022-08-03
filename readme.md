@@ -11,6 +11,7 @@ Anotações de estudo sobre JavaScript, assuntos que tenho dificuldade, ou novos
 - [Callback](#Callback)
 - [Função Construtora](#FuncoesConstrutoras)
 - [Class](#Class)
+- [Object Methods](#Object)
 
 ## <a name="Destructuring"></a> Destructuring
 > É uma expressão que permite extrair dados de um array ou objeto de em variáveis distintas. 
@@ -339,6 +340,77 @@ const mindhunter = new Livro('MindHunter', 'Intrínseca', 374)
 mindhunter.anunciarTitulo()					// => Título: MindHunter
 mindhunter.descreverTituilo()					// => MindHunter é um livro da editora Intrínseca, e contém 374 páginas
  ```
+ 
+ <hr>
+ 
+ ## <a name="Object"></a> Object Methods
+ - [Object.assign()](#assign)
+ - [Object.entries()](#entries)
+ 
+ 
+ ## <a name="assign"></a> Object.assign()
+ > É usado para copiar valores de todas as propriedades próprias enumeráveis de um ou mais objetos de origem para um objeto destino.
+ ```javascript
+ const paleta01 = { corUM: 'Vermelho', corDois: 'Azul', corTres: 'Verde' }
+ const paleta02 = { corQuatro: 'Amarelo', corCinco: 'Preto', corSeis: 'Marrom' }
+ 
+ const totalCores = Object.assign(paleta01, paleta02)
+ 
+ console.log(totalCores)
+ 
+ /*
+ {
+corUm: 'Vermelho',
+corDois: 'Azul',
+corTres: 'Verde',
+corQuatro: 'Amarelo',
+corCinco: 'Preto',
+corSeis: 'Marrom'
+   } 
+*/
+ ```
+ 
+## <a name="create"></a> Object.create()
+ > Faz um objeto ser prototype de outro objeto
+ ```javascript
+ const pai = {pai: 'Gustavo'}
+/* 
+pai
+{pai: 'Gustavo'}
+*/
+
+const filha = Object.create(pai)
+/*
+filha
+{}
+	[[Prototype]]: Object
+	   pai: "Gustavo"
+	   [[Prototype]]: Object
+*/
+
+ ```
+ 
+## <a name="entries"></a> Object.entries()
+> Retora uma matriz dos pares chaves e valores de um objeto.
+```javascript
+const coresTimes = {
+	flamengo: 'Vermelho e Preto',
+	palmeiras: 'Verde e Branco',
+	vasco: 'Preto e Branco',
+	gremio: 'Azul e Preto'
+}
+
+console.log(Object.entries(coresTimes))
+/*
+[
+  [ 'flamengo', 'Vermelho e Preto' ],
+  [ 'palmeiras', 'Verde e Branco' ],
+  [ 'vasco', 'Preto e Branco' ],
+  [ 'gremio', 'Azul e Preto' ]
+]
+*/
+```
+ 
 
  
  
