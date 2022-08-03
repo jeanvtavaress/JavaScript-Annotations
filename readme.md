@@ -344,8 +344,9 @@ mindhunter.descreverTituilo()					// => MindHunter é um livro da editora Intrí
  <hr>
  
  ## <a name="Object"></a> Object Methods
- - [Object.assign()](#assign)
- - [Object.entries()](#entries)
+- [Object.assign()](#assign)
+- [Object.create()](#create)
+- [Object.entries()](#entries)
  
  
  ## <a name="assign"></a> Object.assign()
