@@ -347,6 +347,8 @@ mindhunter.descreverTituilo()					// => MindHunter é um livro da editora Intrí
 - [Object.assign()](#assign)
 - [Object.create()](#create)
 - [Object.entries()](#entries)
+- [Object.freeze()](#freeze)
+- [Object.keys()](#keys)
  
  
  ## <a name="assign"></a> Object.assign()
@@ -411,6 +413,42 @@ console.log(Object.entries(coresTimes))
 ]
 */
 ```
+
+## <a name="freeze"></a> Object.freeze()
+> Congela um objeto, não sendo possível mexer nele.
+```javascript
+const pessoa = {
+	nome: 'Pedro',
+	idade: 25,
+	cidade: 'Santa Catarina',
+	cep: '*********'
+}
+Object.freeze(pessoa)
+
+pessoa.nome = 'Alberto'   // Nome continuará sendo Pedro, não se pode alterar nada no objeto depois que usar Object.freeze()
+```
+
+## <a name="keys"></a> Object.keys()
+> Retorna todas as chaves de valores de um objeto, e em array ele retorna os indices dos elementos.
+```javascript
+const familia = {
+	pai: 'Augusto',
+	mae: 'Sandra',
+	irmao: 'Ricardo',
+	avó: 'Ana',
+	avô: 'Inacio'
+}
+
+console.log(Object.keys(familia))
+// [ 'pai', 'mae', 'irmao', 'avó', 'avô' ]
+
+
+const ingredientes = ['Ovo', 'Trigo', 'Manteiga', 'Leite']
+console.log(Object.keys(ingredientes))
+// [ '0', '1', '2', '3' ]
+```
+
+
  
 
  
