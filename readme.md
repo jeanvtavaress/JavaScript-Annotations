@@ -529,6 +529,7 @@ console.log(Object.hasOwn(familia, 'avô'))  //  false
 - [indexOf()](#indexof)
 - [MAP()](#MAP)
 - [REDUCE()](#REDUCE)
+- [FILTER()](#FILTER)
 
 ## <a name="shift"></a> shift()
 > Remove e retorna o primeiro elemento de um array.
@@ -652,6 +653,27 @@ console.log(totalLançamentos)
 
 // 112
 ```
+
+## <a name="FILTER"></a> filter()
+> Cria um novo array com todos os elementos que passaram no teste da função fornocida.
+``` javascript
+let produtos = [ 
+	{nome: 'Coca Cola', preco: 5}, 
+	{nome: 'Pizza', preco: 15}, 
+	{nome: 'Kinder Ovo', preco: 99} 
+  ];
+  
+  let produtosBaratos = produtos.filter(function(produto) {
+	return produto.preco < 20;
+  });
+  
+  console.log(produtosBaratos);
+  
+  // [ { nome: 'Coca Cola', preco: 5 }, { nome: 'Pizza', preco: 15 } ]
+```
+- [Início](#inicio)
+
+<hr>
 
 
 
