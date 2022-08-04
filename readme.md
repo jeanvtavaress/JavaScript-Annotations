@@ -1,5 +1,7 @@
 
 Anotações de estudo sobre JavaScript, assuntos que tenho dificuldade, ou novos aprendizados.
+## <a name="inicio"></a> Início
+
 
 # Tópicos
 - [Destructuring](#Destructuring)
@@ -12,6 +14,7 @@ Anotações de estudo sobre JavaScript, assuntos que tenho dificuldade, ou novos
 - [Função Construtora](#FuncoesConstrutoras)
 - [Class](#Class)
 - [Object Methods](#Object)
+- [Array](#Array)
 
 ## <a name="Destructuring"></a> Destructuring
 > É uma expressão que permite extrair dados de um array ou objeto de em variáveis distintas. 
@@ -90,6 +93,7 @@ const {instagram} = pessoa.links    // => https://www.instagram.com/
     console.log('Nome :' +n+ ', Pai: ' +p)               // => Nome: Gustavo, Pai: Pedro
   }                                                      // => Nome: Felipe, Pai: Pedro
  ```
+ - [Início](#inicio)
  <hr>
  
  ## <a name="IF-ELSE"></a> IF, ELSE, ELSE IF
@@ -119,6 +123,7 @@ const {instagram} = pessoa.links    // => https://www.instagram.com/
       return true                                      // => true
     }
  ```
+ - [Início](#inicio)
  <hr>
  
  ## <a name="WHILE"></a> Estrutura de repetição: WHILE, DO WHILE.
@@ -137,6 +142,7 @@ let i = 0
   i++
   } while(i < 10)
 ```
+- [Início](#inicio)
 <hr>
 
  ## <a name="FOR"></a> Estrutura de repetição: FOR, FOR...IN, FOR...OF.
@@ -178,7 +184,7 @@ let i = 0
     }
   }
 ```
-
+- [Início](#inicio)
   <hr>
   
  ## <a name="setInterval"></a> setInterval( ) e clearInterval( ), setTimeout( ) e clearTimeout( ).
@@ -226,7 +232,7 @@ function parar(){
 
 document.getElementById('btn').addEventListener('click', parar)
 ```
-
+- [Início](#inicio)
 <hr>
 
  ## <a name="This"></a> This
@@ -263,7 +269,7 @@ document.getElementById('btn').addEventListener('click', parar)
 const falar = diaAdia.falar.bind(diaAdia)
 falar();
  ```
- 
+ - [Início](#inicio)
  <hr>
  
  ## <a name="Callback"></a> Callback
@@ -290,7 +296,7 @@ function exibeSegundaMensagem(){
 } 
 exibePrimeiraMensagem ('Essa é a primeira mensagem do novo exemplo', exibeSegundaMensagem);  
  ```
- 
+ - [Início](#inicio)
  <hr>
  
  ## <a name="FuncoesConstrutoras"></a> Funções Construtoras
@@ -314,7 +320,7 @@ console.log(palio)
   statusCadastro: [Function (anonymous)]
 }*/
  ```
- 
+ - [Início](#inicio)
  <hr>
  
  ## <a name="Class"></a> Class
@@ -340,7 +346,7 @@ const mindhunter = new Livro('MindHunter', 'Intrínseca', 374)
 mindhunter.anunciarTitulo()					// => Título: MindHunter
 mindhunter.descreverTituilo()					// => MindHunter é um livro da editora Intrínseca, e contém 374 páginas
  ```
- 
+ - [Início](#inicio)
  <hr>
  
  ## <a name="Object"></a> Object Methods
@@ -348,7 +354,7 @@ mindhunter.descreverTituilo()					// => MindHunter é um livro da editora Intrí
 - [Object.create()](#create)
 - [Object.entries()](#entries)
 - [Object.freeze()](#freeze)
-- [Object.keys()](#keys)]
+- [Object.keys()](#keys)
 - [Object.values()](#values)
 - [Object.seal()](#seal)
 - [Object.hasOwn()](#wasOwn)
@@ -497,7 +503,7 @@ console.log(familia);
 */
 ````
 
-## <a name="hasOwn"></a> Object.hasOwn()
+## <a name="wasOwn"></a> Object.hasOwn()
 > Retorna um valor booleano, se o objeto especifico possui a propriedade indicada retorna true, se a propriedade for herdada ou não existir, retorna false.
 ```javascript 
 const familia = {
@@ -509,8 +515,45 @@ const familia = {
 console.log(Object.hasOwn(familia, 'pai'))  //  true
 console.log(Object.hasOwn(familia, 'avô'))  //  false
 ```
+- [Início](#inicio)
 
 <hr>
+
+## <a name="Array"></a> Array
+- [shitf()](#shift)
+- [unshitf()](#unshift)
+- [push()](#push)
+
+## <a name="shift"></a> shift()
+> Remove e retorna o primeiro elemento de um array.
+```javascript
+const frutas = ['uva', 'banana', 'maçã']
+
+console.log(frutas.shift())  // [ 'banana', 'maçã' ]
+
+// uva
+```
+
+## <a name="unshift"></a> unshift()
+> Adiciona elemento no inicio de um array, e retorna o número de elementos
+```javascript
+const frutas = ['uva', 'banana', 'maçã']
+
+console.log(frutas.unshift('pêra'))  // [ 'pêra', 'uva', 'banana', 'maçã' ]
+
+// 4
+```
+
+## <a name="push"></a> push()
+>  Adiciona elemento ao final do array e retorna o novo comprimento dele.
+```javascript
+const frutas = ['uva', 'banana', 'maçã']
+
+console.log(frutas.push('pêra', 'damasco))  // [ 'uva', 'banana', 'maçã', 'pêra', 'damasco' ]
+
+// 5
+```
+
 
 
 
