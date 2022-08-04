@@ -527,6 +527,7 @@ console.log(Object.hasOwn(familia, 'avô'))  //  false
 - [splice()](#splice)
 - [slice()](#slice)
 - [indexOf()](#indexof)
+- [MAP()](#MAP)
 
 ## <a name="shift"></a> shift()
 > Remove e retorna o primeiro elemento de um array.
@@ -610,6 +611,26 @@ console.log(frutasDoces)
 var array = [2, 5, 9]
 array.indexOf(2);     //  0
 array.indexOf(7);     // -1
+```
+
+## <a name="MAP"></a> map()
+> Cria uma nova matriz e chama uma função para cada elemento da matriz.
+```javascript 
+const users = [
+	{id: 1, nome: 'victor', idade: 25},
+	{id: 2, nome: 'claudio', idade: 23},
+	{id: 3, nome: 'jesé', idade: 13},
+	{id: 4, nome: 'paulo', idade: 48}
+]
+
+const nomes = users.map((nomes) => nomes.nome)
+console.log(nomes)
+// [ 'victor', 'claudio', 'jesé', 'paulo' ]
+
+const idades = users.map((idades) => idades.idade)
+console.log(idades)
+// [ 25, 23, 13, 48 ]
+
 ```
 
 
