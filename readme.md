@@ -528,6 +528,7 @@ console.log(Object.hasOwn(familia, 'avô'))  //  false
 - [slice()](#slice)
 - [indexOf()](#indexof)
 - [MAP()](#MAP)
+- [REDUCE()](#REDUCE)
 
 ## <a name="shift"></a> shift()
 > Remove e retorna o primeiro elemento de um array.
@@ -633,6 +634,24 @@ console.log(idades)
 
 ```
 
+## <a name="REDUCE"></a> reduce()
+> O reduce busca reduzir um array. Ele iterará por cada elemento dessa lista com o objetivo de ao final gerar um único valor.
+```javascript 
+const rockets = [
+	{país: 'russia', lançamentos: 32},
+	{país: 'us', lançamentos: 23},
+	{país: 'china', lançamentos: 16},
+	{país: 'europa', lançamentos: 7},
+	{país: 'india', lançamentos: 32},
+	{país: 'japão', lançamentos: 2},
+]
+
+const totalLançamentos = rockets.reduce((anterior, atual) => anterior + atual.lançamentos, 0)
+
+console.log(totalLançamentos)
+
+// 112
+```
 
 
 
