@@ -523,6 +523,10 @@ console.log(Object.hasOwn(familia, 'avô'))  //  false
 - [shitf()](#shift)
 - [unshitf()](#unshift)
 - [push()](#push)
+- [pop()](#pop)
+- [splice()](#splice)
+- [slice()](#slice)
+- [indexOf()](#indexof)
 
 ## <a name="shift"></a> shift()
 > Remove e retorna o primeiro elemento de um array.
@@ -553,6 +557,61 @@ console.log(frutas.push('pêra', 'damasco))  // [ 'uva', 'banana', 'maçã', 'p�
 
 // 5
 ```
+
+## <a name="pop"></a> pop()
+> Remove e retorna o último elemento de um array.
+```javascript
+const frutas = ['uva', 'banana', 'maçã']
+
+console.log(frutas.pop()) // [ 'uva', 'banana' ]
+
+// maçã
+````
+
+
+## <a name="splice"></a> splice()
+> Altera o conteúdo de uma lista, adicionando novos elementos enquanto remove os antigos.
+```javascript
+let animais = ['cachorro', 'gato', 'macaco', 'jacaré']
+
+animais.splice(3, 1, 'vaca') 
+
+console.log(animais)
+
+// [ 'cachorro', 'gato', 'macaco', 'vaca' ]
+````
+## <a name="slice"></a> slice()
+> Retorna um recorte do array a partir de índices.
+```javascript
+const frutas = ['banana', 'uva', 'laranja', 'morango']
+
+const frutasDoces = frutas.slice(0, 2)
+
+console.log(frutasDoces)
+
+// [ 'banana', 'uva' ]
+```
+
+## <a name="slice"></a> slice()
+> Retorna um recorte do array a partir de índices.
+```javascript
+const frutas = ['banana', 'uva', 'laranja', 'morango']
+
+const frutasDoces = frutas.slice(0, 2)
+
+console.log(frutasDoces)
+
+// [ 'banana', 'uva' ]
+```
+
+## <a name="indexof"></a> indexOf()
+> Retorna o primeiro indice que determinado elemento pode ser encontrado no array. E retorna -1 caso não esteja presente.
+```javascript
+var array = [2, 5, 9]
+array.indexOf(2);     //  0
+array.indexOf(7);     // -1
+```
+
 
 
 
