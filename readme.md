@@ -15,6 +15,7 @@ Anotações de estudo sobre JavaScript.
 - [Class](#Class)
 - [Object Methods](#Object)
 - [Array](#Array)
+- [Promise](#promise)
 
 ## <a name="Destructuring"></a> Destructuring
 > É uma expressão que permite extrair dados de um array ou objeto de em variáveis distintas. 
@@ -670,6 +671,30 @@ let produtos = [
   console.log(produtosBaratos);
   
   // [ { nome: 'Coca Cola', preco: 5 }, { nome: 'Pizza', preco: 15 } ]
+```
+- [Início](#inicio)
+
+<hr>
+
+## <a name="promise"></a> Promise
+> Promise representa um valor que pode ta disponivel agora, no futuro ou nunca.
+
+> New Promise é uma função; Recebe função como parametro: "resolve" e "reject".
+
+> Para acesssar o valor de "resolve" usa-se .then(); Para acessar o valor de "reject" usa-se .catch().
+```javascript
+const umaPromise = new Promise((resolve, reject) => {
+    const umNumero = 89
+    if(umNumero === 80){
+        resolve('O número é igual a 80')
+    } else {
+        reject('O número não é 80')
+    }
+})
+
+umaPromise
+    .then(resolveValue => console.log(resolveValue))  // 
+    .catch(rejectValue => console.log(rejectValue))   // O número não é 80
 ```
 - [Início](#inicio)
 
