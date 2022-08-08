@@ -16,7 +16,7 @@ Anotações de estudo sobre JavaScript.
 - [Object Methods](#Object)
 - [Array](#Array)
 - [Promise](#promise)
-
+- [Async Await](#async)
 ## <a name="Destructuring"></a> Destructuring
 > É uma expressão que permite extrair dados de um array ou objeto de em variáveis distintas. 
 
@@ -700,8 +700,33 @@ umaPromise
 
 <hr>
 
+## <a name="async"></a> Async Await
+> Async faz uma função retornar uma promessa
 
+> Await faz uma função esperar por uma promessa.
+```javascript
+function esperarPor(tempo = 2000){
+    return new Promise(function(resolve){
+        setTimeout(() => resolve(), tempo)
+    })
+}
 
+async function executar(){
+    await esperarPor(5000)  // irá esperar 5 segundos para executar o console log 
+    console.log('Await 1')
+
+    await esperarPor(1500)  // irá esperar 1,5 segundos para executar o console log 
+    console.log('Await 2')
+
+    await esperarPor(3000)  // irá esperar 3 segundos para executar o console log 
+    console.log('Await 3')
+}
+
+executar()
+```
+- [Início](#inicio)
+
+<hr>
 
 
  
