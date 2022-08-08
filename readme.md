@@ -1,5 +1,5 @@
 
-Anotações de estudo sobre JavaScript, assuntos que tenho dificuldade, ou novos aprendizados.
+Anotações de estudo sobre JavaScript.
 ## <a name="inicio"></a> Início
 
 
