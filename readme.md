@@ -17,6 +17,7 @@ Anotações de estudo sobre JavaScript.
 - [Array](#Array)
 - [Promise](#promise)
 - [Async Await](#async)
+- [Fetch](#fetch)
 ## <a name="Destructuring"></a> Destructuring
 > É uma expressão que permite extrair dados de um array ou objeto de em variáveis distintas. 
 
@@ -727,6 +728,13 @@ executar()
 - [Início](#inicio)
 
 <hr>
+
+## <a name="fetch"></a> Fetch
+> Fazendo requisão com fetch
+```javascript
+fetch(url)
+    .then(resp => resp.jscon())
+```
 
 
  
